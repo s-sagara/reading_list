@@ -15,6 +15,7 @@
 		AB1EF73F1F4C1FAA00BD2A4B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB1EF73D1F4C1FAA00BD2A4B /* LaunchScreen.storyboard */; };
 		AB1EF7661F4D614400BD2A4B /* contentsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1EF7641F4D614400BD2A4B /* contentsTableViewCell.swift */; };
 		AB1EF7671F4D614400BD2A4B /* contentsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB1EF7651F4D614400BD2A4B /* contentsTableViewCell.xib */; };
+		AB1EF7691F5E861A00BD2A4B /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1EF7681F5E861A00BD2A4B /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		AB1EF7401F4C1FAA00BD2A4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AB1EF7641F4D614400BD2A4B /* contentsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = contentsTableViewCell.swift; sourceTree = "<group>"; };
 		AB1EF7651F4D614400BD2A4B /* contentsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = contentsTableViewCell.xib; sourceTree = "<group>"; };
+		AB1EF7681F5E861A00BD2A4B /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		F57784ECCA1B4A9F10BE6455 /* Pods-reading_list.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-reading_list.release.xcconfig"; path = "Pods/Target Support Files/Pods-reading_list/Pods-reading_list.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -81,6 +83,7 @@
 				AB1EF7641F4D614400BD2A4B /* contentsTableViewCell.swift */,
 				AB1EF7651F4D614400BD2A4B /* contentsTableViewCell.xib */,
 				AB1EF7401F4C1FAA00BD2A4B /* Info.plist */,
+				AB1EF7681F5E861A00BD2A4B /* DetailViewController.swift */,
 			);
 			path = reading_list;
 			sourceTree = "<group>";
@@ -221,6 +224,7 @@
 				AB1EF7661F4D614400BD2A4B /* contentsTableViewCell.swift in Sources */,
 				AB1EF7371F4C1FAA00BD2A4B /* ViewController.swift in Sources */,
 				AB1EF7351F4C1FAA00BD2A4B /* AppDelegate.swift in Sources */,
+				AB1EF7691F5E861A00BD2A4B /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
