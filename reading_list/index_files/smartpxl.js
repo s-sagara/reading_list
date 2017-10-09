@@ -1,0 +1,1 @@
+(function(){var tagjs=document.createElement("script");var s=document.getElementsByTagName("script")[0];tagjs.async=true;tagjs.src="https://smrtpxl.advertising.com/S?spid=512&typ=MP";s.parentNode.insertBefore(tagjs,s)}());

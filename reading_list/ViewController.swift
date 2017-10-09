@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import OpenGraph
 
 class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate {
 
@@ -20,6 +21,16 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
         contentstableview.dataSource = self
         contentstableview.delegate = self
         loadcontents()
+        let nib = UINib(nibName: "contentsTableViewCell", bundle: Bundle.main)
+        contentstableview.register(nib, forCellReuseIdentifier: "contentscell")
+        let graphURL = URL(string: "https://www.google.com")
+        OpenGraph.fetch(url: graphURL!) { og, error in
+            print(og?[.title]) // => og:title of the web site
+            print(og?[.type])  // => og:type of the web site
+            print(og?[.image]) // => og:image of the web site
+            print(og?[.url])   // => og:url of the web site
+        }
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -32,11 +43,12 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        print(contentsarray)
         return contentsarray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "contentscell")!
+        let cell = tableView.dequeueReusableCell(withIdentifier: "contentscell") as! contentsTableViewCell
         cell.textLabel?.text = contentsarray[indexPath.row]
         return cell
     }
@@ -45,7 +57,7 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
     func loadcontents(){
         
         let ud = UserDefaults.standard
-        if ud.array(forKey: "memoarray") != nil{
+        if ud.array(forKey: "contentsarray") != nil{
             
             contentsarray = ud.array(forKey: "contentsarray") as! [String]
             contentstableview.reloadData()

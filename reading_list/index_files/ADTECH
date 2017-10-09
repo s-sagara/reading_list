@@ -1,0 +1,12 @@
+var microadCompass = microadCompass || {};
+microadCompass.queue = microadCompass.queue || [];
+
+document.write("<scr"+"ipt type=\"text/javascript\" charset=\"UTF-8\" src=\"//j.microad.net/js/compass.js\" onload=\"new microadCompass.AdInitializer().initialize();\" async></scr"+"ipt>\n");
+document.write("<div id=\"05b988918d8d186c406dfa8c9cfcf2cb\" >\n");
+document.write("<scr"+"ipt type=\"text/javascript\" src=\"https://aka-cdn.adtechus.com/apps/330/Ad9312586St3Sz225Sq25873819V1Id1/extFile1.js\"></scr"+"ipt>\n");
+document.write("</div>\n");
+
+
+document.write('<img src="https://atpixelus.alephd.com/post_adtech?NZ0R4Poc1cAMw2iZlWliGBeECD5tNwD8xz63g4TCkmWpoaswUrT7mOIObRejA3w9sBkNSAD3IQS8xglMI0zHSMmXit51KEDjgWzozzdxRlMJThgqpwQak9juaRUS2i0RGafye3u8M5gvnK2L3XVlpMcn3URR5NG5vjrOabPp8Vq3Gtz8hygFxWqU1q5NdmpaOwh3JZuxz0Lys66bU9lNYbbWw807WtSkxfcwBncuasc=" width="1" height="1"  style="display:none;">');
+document.write('<img src="https://x.bidswitch.net/sync?ssp=aol" width="1" height="1" style="display:none;">');
+document.write('<iframe src="https://ad.turn.com/server/pixelssl.htm?fpid=28" width="1" height="1" style="display: none"></iframe>');

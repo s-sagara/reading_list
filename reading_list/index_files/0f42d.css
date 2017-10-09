@@ -1,0 +1,712 @@
+a:link { color: #d04646; text-decoration:none;-webkit-transition: 1s ease-in-out;} 
+a:visited { color: #666666; text-decoration:none;-webkit-transition: 1s ease-in-out;} 
+a:active { color: #ba4e4e; text-decoration:underline;}
+a:hover { color: #ba4e4e;text-decoration:underline;} 
+
+.nonborder { 
+border:none; 
+outline:none; 
+}
+
+ul{
+margin:0;
+}
+
+pre{
+padding:0;
+}
+
+body {
+font-size:15px;
+font-family:arial, sans-serif;
+text-align:left;
+color:#333333;
+line-height:1.5em;
+background-color:#efefef;
+-webkit-text-size-adjust:100%;
+}
+
+
+#header-container{
+width:960px;
+text-align:left;
+margin:0px auto;
+padding:0px;
+position:relative;
+}
+
+#header-container header{
+padding:0;
+margin:0 0 30px 0;
+}
+
+/* search */
+
+.search{
+width:150px;
+height:35px;
+position:absolute;
+top:150px;
+right:20px;
+}
+
+#searchform4 {  
+width:150px;  
+height:35px; 
+display: block;       
+position: relative;  
+}  
+
+#keywords4  {  
+width:120px;  
+height:13px;
+top:0px;
+left:0px;
+color:#ffffff;
+position:absolute;
+border:none;
+outline:none; 
+font-size:13px;
+padding:10px 10px;
+background-color:transparent;
+}  
+
+#searchBtn4 {  
+width:30px;
+height:35px;
+top:0;
+left:120px;
+border:none;
+outline:none;
+position:absolute; 
+cursor:pointer;
+background-color:transparent;
+text-indent:-9999px;
+}  
+
+/* photoimage */
+
+.topphoto{
+width:675px;
+height:270px;
+padding:10px;
+margin:0;
+background-image:url(http://blog-imgs-52-origin.fc2.com/m/y/s/mysticdiary/aplikephotoback.png);
+}
+
+.topphoto2{
+width:675px;
+height:270px;
+padding:0;
+margin:0;
+}
+
+/* header */
+
+h1,h2,h3,h4{
+font-weight:normal;
+margin:0;
+}
+
+h1{
+padding:50px 0 0 30px;
+margin-bottom:10px;
+font-size:25px;
+font-family: "ＭＳ Ｐ明朝",Georgia,serif;
+}
+
+.intro{
+margin:0 0 0 30px;
+font-size:12px;
+color:#333333;
+}
+
+h1 a:link,h1 a:visited{
+color:#333333;
+}
+
+h1 a:hover{
+color:#d04646;
+text-decoration:none;
+}
+
+h2{
+font-size:20px;
+padding:0;
+margin:0 0 10px 0;
+}
+
+h3{
+font-size:17px;
+padding:0;
+margin-bottom:20px;
+color:#333333;
+}
+
+h4{
+font-size:16px;
+padding:10px 0 20px 0;
+color:#333333;
+font-family: Georgia,serif;
+text-decoration:underline;
+}
+
+h4 a{
+color:#333333;
+text-decoration:unterline;
+}
+
+.comment h4{
+padding:0;
+}
+
+.comtitle a,.tbtitle a{
+padding:0;
+color:#d04646;
+}
+
+.comtitle a:hover,.tbtitle a:hover{
+padding:0;
+color:#333333;
+}
+
+.comtitle{
+padding:0;
+}
+
+.tbtitle{
+margin-top:10px;
+}
+
+.comment h4:first-letter,.pcomment h4:first-letter,.trackback h4:first-letter,.titlelist h4:first-letter{
+font-size:30px;
+}
+
+#maincontents .ecomment h4:first-letter{
+font-size:30px !important;
+}
+
+.comment header{
+margin:20px 0 0 0;
+}
+
+/* nav */
+
+.topnav{
+width:auto;
+height:60px;
+display:block;
+position:absolute;
+top:10px;
+right:30px;
+font-family: Georgia,serif;
+}
+
+.topnav ul{
+width:auto;
+}
+
+.topnav ul li{
+float:left;
+font-size:11px;
+margin:0 0 0 20px;
+padding:0;
+background-image:none !important;
+list-style-type:none !important;
+}
+
+.topnav li a:link,.topnav li a:visited{
+width:auto;
+padding:2px 0 0 0;
+margin-left:2px;
+color:#333333;
+display:block;
+text-align:center;
+text-decoration:none;
+}
+
+.topnav li a:hover{
+color:#d04646;
+}
+
+
+/* globalnav */
+
+.globalnav{
+width:940px;
+height:40px;
+background-image:url(http://blog-imgs-52-origin.fc2.com/m/y/s/mysticdiary/aplikemenu1.png);
+margin:0;
+font-family: Georgia,serif;
+padding:10px;
+}
+
+.globalnav ul{
+width:940px;
+height:40px;
+}
+
+.globalnav ul li{
+width:110px;
+height:40px;
+float:left;
+text-align:center;
+}
+
+.globalnav ul li a:link,.globalnav ul li a:visited{
+width:110px;
+height:31px;
+display:block;
+padding:9px 0 0 0;
+color:#ffffff;
+}
+
+.globalnav ul li a:hover{
+color:#bd6666;
+}
+
+.pagetop,.pagetop2{
+padding:10px 0 0 0;
+font-size:12px;
+text-align:right;
+}
+
+.pagetop3{
+clear:both;
+padding:20px 30px;
+font-size:12px;
+text-align:right;
+}
+
+.postnav{
+text-align:center;
+padding:20px 30px;
+}
+
+.pagenav{
+text-align:left;
+margin:20px 0 0 0;
+padding:0 30px;
+clear:both;
+width:635px;
+font-family: Georgia,serif;
+font-style:italic;
+}
+
+.numberb{
+font-size:20px;
+text-align:center;
+width:25px;
+height:25px;
+margin-right:2px;
+display:block;
+float:left;
+color:#333333;
+}
+
+.number a{
+font-size:20px;
+text-align:center;
+width:25px;
+height:25px;
+margin-right:2px;
+display:block;
+float:left;
+}
+
+.number a:hover{
+font-size:20px;
+text-align:center;
+width:25px;
+height:25px;
+margin-right:2px;
+display:block;
+float:left;
+color:#d04646;
+}
+
+.dot{
+font-size:20px;
+text-align:center;
+width:30px;
+height:30px;
+margin-right:2px;
+display:block;
+float:left;
+}
+
+/* maincontents */
+
+#main-container{
+width:960px;
+padding:0;
+position:relative;
+margin:0 auto;
+}
+
+section#maincontents{
+width:695px;
+padding:0 0 20px 0;
+float:left;
+}
+
+.maintop{
+width:695px;
+height:30px;
+background-image:url(http://blog-imgs-52-origin.fc2.com/m/y/s/mysticdiary/aplikemaintop.png);
+}
+
+.mainbottom{
+width:695px;
+height:30px;
+background-image:url(http://blog-imgs-52-origin.fc2.com/m/y/s/mysticdiary/aplikemainbottom.png);
+}
+
+/* blogpost */
+
+.blogpost{
+width:635px;
+padding:10px 30px 10px 30px;
+background-image:url(http://blog-imgs-52-origin.fc2.com/m/y/s/mysticdiary/aplikemainnaka.png);
+background-repeat:repeat-y;
+background-position:center top;
+}
+
+.blogpost h2{
+font-size:20px;
+margin:0 0 10px 0;
+padding:0;
+}
+
+.blogpost .info{
+padding:0;
+font-size:12px;
+font-family: Georgia,serif;
+font-style:italic;
+text-align:right;
+}
+
+.blogpost p{
+clear:both;
+margin:20px 0 0 0;
+}
+
+.morelink a:link,.morelink a:visited{
+width:105px;
+height:37px;
+display:block;
+margin:10px 0 10px 530px;
+}
+
+.morelink a:hover{
+}
+
+.fc2_footer{
+margin:10px 0;
+}
+
+.fc2button-facebook iframe {
+width: 105px !important;
+}
+
+.relate_dl{
+width:595px;
+padding:20px;
+margin:20px 0;
+background-color:#eeeeee;
+border-radius: 5px;        
+-webkit-border-radius: 5px;    
+-moz-border-radius: 5px;   
+}
+
+.relate_dt{
+color:#333333;
+padding:0 0 10px 0;
+}
+
+#maincontents blockquote{
+border:1px #333333 dotted;
+no-repeat 95% 68%;
+background-color:#eeeeee;
+font-size:13px;
+padding:10px;
+margin:10px;
+}
+
+#maincontents blockquote p{
+clear:both;
+margin:0 0 0 12px;
+}
+
+#maincontents blockquote .origin	{
+	text-align: right;
+	padding-top: 8px;
+	margin-bottom:0;
+}
+#maincontents blockquote .origin a	{
+repeat 0 7px;
+	padding-left: 15px;
+	color: #999;
+}
+
+
+
+.titlelist{
+width:635px;
+padding:0px 30px 10px 30px;
+background-image:url(http://blog-imgs-52-origin.fc2.com/m/y/s/mysticdiary/aplikemainnaka.png);
+background-repeat:repeat-y;
+background-position:center top;
+}
+
+.searcharea{
+width:635px;
+padding:0px 30px 10px 30px;
+background-image:url(http://blog-imgs-52-origin.fc2.com/m/y/s/mysticdiary/aplikemainnaka.png);
+background-repeat:repeat-y;
+background-position:center top;
+}
+
+.searcharea li{
+padding:0 0 10px 20px;
+}
+
+.searcharea p{
+margin:10px 0 30px 0;
+}
+
+pre code{
+display:block;
+overflow:auto;
+background-color:#eeeeee;
+color:#333333;
+padding:10px;
+border-radius: 5px;        
+-webkit-border-radius: 5px;    
+-moz-border-radius: 5px;
+}
+
+/* list-style */
+
+#maincontents ul li,.searcharea li{
+background-image:url(http://blog-imgs-30-origin.fc2.com/m/y/s/mysticdiary/efef5.gif
+) !important;
+background-repeat:no-repeat !important;
+background-position:left 8px !important;
+list-style:none;
+margin:0;
+padding:0 0 0 15px;
+position:relative;
+height:100%;
+}
+
+#maincontents .relate_dl ul li,.plugcontent ul li{
+background-image:url(http://blog-imgs-30-origin.fc2.com/m/y/s/mysticdiary/efef5.gif
+) !important;
+background-repeat:no-repeat !important;
+background-position:left 8px !important;
+list-style:none;
+margin:0;
+padding:0 0 0 15px;
+position:relative;
+height:100%;
+}
+
+/* footer-style */
+
+.topfooter{
+font-size:12px;
+padding:5px 0;
+margin:0 0 10px 80px;
+font-family: Georgia,serif;
+font-style:italic;
+}
+
+.bottomfooter{
+font-size:12px;
+padding:5px 0;
+text-align:right;
+font-family: Georgia,serif;
+font-style:italic;
+}
+
+.comfooter,.tbfooter{
+font-size:12px;
+padding:10px 0;
+border-bottom:1px gray dotted;
+margin-bottom:0px;
+text-align:right;
+font-family: Georgia,serif;
+font-style:italic;
+}
+
+.titlelistfooter{
+font-size:12px;
+font-style:italic;
+font-family: Georgia,serif;
+padding-bottom:10px;
+margin-bottom:10px;
+}
+
+/* comment */
+
+.pcomment,.ecomment,.trackback{
+width:635px;
+padding:10px 30px 10px 30px;
+background-image:url(http://blog-imgs-52-origin.fc2.com/m/y/s/mysticdiary/aplikemainnaka.png);
+background-repeat:repeat-y;
+background-position:center top;
+}
+
+.comment{
+width:635px;
+padding:10px 30px 10px 30px;
+background-image:url(http://blog-imgs-52-origin.fc2.com/m/y/s/mysticdiary/aplikemainnaka.png);
+background-repeat:repeat-y;
+background-position:center top;
+}
+
+.cbody{
+padding:20px 0 10px 0;
+}
+
+.pcomment p,.ecomment p{
+padding:5px 0;
+}
+
+input{
+border:none;
+outline:none;
+background-color: #ffffff;
+border:1px #cccccc solid;
+border-radius: 5px;        
+-webkit-border-radius: 5px;    
+-moz-border-radius: 5px; 
+}
+
+textarea{
+width:100%;
+height:150px;
+scrollbar-base-color:#ffffff;
+scrollbar-track-color:#ffffff;
+overflow:auto;
+border:none;
+outline:none;
+background-color: #ffffff;
+border:1px #cccccc solid;
+border-radius: 5px;        
+-webkit-border-radius: 5px;    
+-moz-border-radius: 5px; 
+}
+
+#ppost,#ecom,#dcom{
+padding:5px 10px;
+margin:10px 0px;
+background: #eeeeee;
+background-image:url(http://blog-imgs-30-origin.fc2.com/m/y/s/mysticdiary/beautylookside.png);
+color:#333333;
+font-size:13px;
+font-family: Georgia,serif;
+border-radius: 5px;        
+-webkit-border-radius: 5px;    
+-moz-border-radius: 5px; 
+}
+
+/* sidebar */
+
+aside#sidebar{
+color:#333333;
+padding:0px;
+float:right;
+width:265px;
+margin:0px 0px 50px 0;
+text-align:left;
+font-size:13px;
+}
+
+.sidetop{
+width:265px;
+height:30px;
+background-image:url(http://blog-imgs-52-origin.fc2.com/m/y/s/mysticdiary/aplikesidetop.png);
+}
+
+.sidebottom{
+width:265px;
+height:30px;
+background-image:url(http://blog-imgs-52-origin.fc2.com/m/y/s/mysticdiary/aplikesidebottom.png);
+}
+
+.plugcontent{
+width:205px;
+padding:0 30px 10px 30px;
+margin:0;
+background-image:url(http://blog-imgs-52-origin.fc2.com/m/y/s/mysticdiary/aplikesidenaka.png);
+background-repeat:repeat-y;
+background-position:center top;
+}
+
+.plugcontent ul{
+width:205px;
+}
+
+/* bottomfooter */
+
+#footer-container{
+width:960px;
+margin:0 auto;
+font-size:12px;
+padding:0px;
+}
+
+#footer-container footer{
+color:#333333;
+width:900px;
+padding:0 30px;
+overflow:hidden;
+margin:0 auto;
+}
+
+#footer-container .footer-address{
+clear:both;
+padding:10px 0;
+width:880px;
+}
+
+/* calender */
+
+table.calender {
+width:100%;
+margin:0px auto;
+font-size: 100%;
+}
+
+table.calender caption {
+margin-bottom: 10px;
+margin:0px auto;
+}
+
+table.calender th,
+table.calender td {
+padding: 0.1em;
+border-bottom: 1px dotted #cccccc;
+text-align: center;
+}
+
+table.calender td a {
+display: block;
+background-color: #d04646;
+color: #ffffff;
+}
+
+table.calender td a:hover {
+background-color: #ba4e4e;
+color: #ffffff;
+}
+
+table.calender th#sun {
+color: #d04646;
+}
+
+table.calender th#sat {
+color: #6dc3b6;
+}
