@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import OpenGraph
+//import OpenGraph
 
 class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate {
 
@@ -23,13 +23,13 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
         loadcontents()
         let nib = UINib(nibName: "contentsTableViewCell", bundle: Bundle.main)
         contentstableview.register(nib, forCellReuseIdentifier: "contentscell")
-        let graphURL = URL(string: "https://www.google.com")
-        OpenGraph.fetch(url: graphURL!) { og, error in
-            print(og?[.title]) // => og:title of the web site
-            print(og?[.type])  // => og:type of the web site
-            print(og?[.image]) // => og:image of the web site
-            print(og?[.url])   // => og:url of the web site
-        }
+//        let graphURL = URL(string: "https://www.google.com")
+//        OpenGraph.fetch(url: graphURL!) { og, error in
+//            print(og?[.title]) // => og:title of the web site
+//            print(og?[.type])  // => og:type of the web site
+//            print(og?[.image]) // => og:image of the web site
+//            print(og?[.url])   // => og:url of the web site
+//        }
         
     }
     

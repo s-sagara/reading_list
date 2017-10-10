@@ -15,7 +15,9 @@ class DetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadAddressURL()
+        let requestURL = NSURL(string: targetURL)
+        let req = URLRequest(url: requestURL! as URL)
+        uiwebview.loadRequest(req)
         // Do any additional setup after loading the view.
     }
 
