@@ -21,6 +21,9 @@
 		AB1EF9151F8C619500BD2A4B /* NSString+Sha1.m in Sources */ = {isa = PBXBuildFile; fileRef = AB1EF90F1F8C619500BD2A4B /* NSString+Sha1.m */; };
 		AB1EF9161F8C619500BD2A4B /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = AB1EF9111F8C619500BD2A4B /* Reachability.m */; };
 		AB1EF9181F8C619500BD2A4B /* RNCachingURLProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = AB1EF9141F8C619500BD2A4B /* RNCachingURLProtocol.m */; };
+		AB1EF91B1F8C89C400BD2A4B /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1EF91A1F8C89C400BD2A4B /* AddViewController.swift */; };
+		AB1EF91D1F8CA6BC00BD2A4B /* webmetas.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1EF91C1F8CA6BC00BD2A4B /* webmetas.swift */; };
+		AB1EF93D1F8CCE0900BD2A4B /* noimage.png in Resources */ = {isa = PBXBuildFile; fileRef = AB1EF93C1F8CCE0900BD2A4B /* noimage.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +48,9 @@
 		AB1EF9131F8C619500BD2A4B /* RNCachingURLProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNCachingURLProtocol.h; sourceTree = "<group>"; };
 		AB1EF9141F8C619500BD2A4B /* RNCachingURLProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNCachingURLProtocol.m; sourceTree = "<group>"; };
 		AB1EF9191F8C61BC00BD2A4B /* reading_list-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "reading_list-Bridging-Header.h"; sourceTree = "<group>"; };
+		AB1EF91A1F8C89C400BD2A4B /* AddViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
+		AB1EF91C1F8CA6BC00BD2A4B /* webmetas.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = webmetas.swift; sourceTree = "<group>"; };
+		AB1EF93C1F8CCE0900BD2A4B /* noimage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = noimage.png; sourceTree = "<group>"; };
 		F57784ECCA1B4A9F10BE6455 /* Pods-reading_list.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-reading_list.release.xcconfig"; path = "Pods/Target Support Files/Pods-reading_list/Pods-reading_list.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -105,7 +111,10 @@
 				AB1EF7641F4D614400BD2A4B /* contentsTableViewCell.swift */,
 				AB1EF7651F4D614400BD2A4B /* contentsTableViewCell.xib */,
 				AB1EF8A91F5FD7C500BD2A4B /* Dopuobdp.jpg */,
+				AB1EF91A1F8C89C400BD2A4B /* AddViewController.swift */,
+				AB1EF91C1F8CA6BC00BD2A4B /* webmetas.swift */,
 				AB1EF7401F4C1FAA00BD2A4B /* Info.plist */,
+				AB1EF93C1F8CCE0900BD2A4B /* noimage.png */,
 				AB1EF7681F5E861A00BD2A4B /* DetailViewController.swift */,
 				AB1EF9191F8C61BC00BD2A4B /* reading_list-Bridging-Header.h */,
 			);
@@ -186,6 +195,7 @@
 			files = (
 				AB1EF73F1F4C1FAA00BD2A4B /* LaunchScreen.storyboard in Resources */,
 				AB1EF73C1F4C1FAA00BD2A4B /* Assets.xcassets in Resources */,
+				AB1EF93D1F8CCE0900BD2A4B /* noimage.png in Resources */,
 				AB1EF8AA1F5FD7C500BD2A4B /* Dopuobdp.jpg in Resources */,
 				AB1EF73A1F4C1FAA00BD2A4B /* Main.storyboard in Resources */,
 				AB1EF7671F4D614400BD2A4B /* contentsTableViewCell.xib in Resources */,
@@ -249,8 +259,10 @@
 			files = (
 				AB1EF7661F4D614400BD2A4B /* contentsTableViewCell.swift in Sources */,
 				AB1EF7371F4C1FAA00BD2A4B /* ViewController.swift in Sources */,
+				AB1EF91B1F8C89C400BD2A4B /* AddViewController.swift in Sources */,
 				AB1EF7351F4C1FAA00BD2A4B /* AppDelegate.swift in Sources */,
 				AB1EF9181F8C619500BD2A4B /* RNCachingURLProtocol.m in Sources */,
+				AB1EF91D1F8CA6BC00BD2A4B /* webmetas.swift in Sources */,
 				AB1EF9151F8C619500BD2A4B /* NSString+Sha1.m in Sources */,
 				AB1EF9161F8C619500BD2A4B /* Reachability.m in Sources */,
 				AB1EF7691F5E861A00BD2A4B /* DetailViewController.swift in Sources */,

@@ -22,8 +22,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     </imageView>
-                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="hoge" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="kdV-aF-ZBv">
-                        <rect key="frame" x="100" y="0.0" width="275" height="100"/>
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="kdV-aF-ZBv">
+                        <rect key="frame" x="100" y="0.0" width="275" height="26"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -32,6 +32,7 @@
                 </subviews>
             </tableViewCellContentView>
             <connections>
+                <outlet property="label" destination="kdV-aF-ZBv" id="P3x-Tw-6x6"/>
                 <outlet property="thumbnail" destination="d02-j9-eCd" id="jbd-AY-JPu"/>
             </connections>
             <point key="canvasLocation" x="33.5" y="82"/>

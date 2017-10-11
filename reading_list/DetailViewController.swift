@@ -11,10 +11,11 @@ import UIKit
 class DetailViewController: UIViewController {
 
     @IBOutlet weak var uiwebview: UIWebView!
-    var targetURL = "http://www.google.com/"
-    
+    var targetURL = ""
+    var targettitle = ""
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.title = targettitle
         let requestURL = NSURL(string: targetURL)
         let req = URLRequest(url: requestURL! as URL)
         uiwebview.loadRequest(req)

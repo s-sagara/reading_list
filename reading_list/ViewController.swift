@@ -7,13 +7,15 @@
 //
 
 import UIKit
-//import OpenGraph
+import URLEmbeddedView
 
 class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate {
-
-    var contentsarray = [String]()
+    
+    var contentsarray = [webmetas]()
     @IBOutlet var contentstableview: UITableView!
-
+    
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,64 +25,191 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
         loadcontents()
         let nib = UINib(nibName: "contentsTableViewCell", bundle: Bundle.main)
         contentstableview.register(nib, forCellReuseIdentifier: "contentscell")
-//        let graphURL = URL(string: "https://www.google.com")
-//        OpenGraph.fetch(url: graphURL!) { og, error in
-//            print(og?[.title]) // => og:title of the web site
-//            print(og?[.type])  // => og:type of the web site
-//            print(og?[.image]) // => og:image of the web site
-//            print(og?[.url])   // => og:url of the web site
-//        }
+        
         
     }
     
     override func viewWillAppear(_ animated: Bool) {
         loadcontents()
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print(contentsarray)
         return contentsarray.count
+    }
+    
+    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        
+        let deleteButton: UITableViewRowAction = UITableViewRowAction(style: .normal, title: "delete!") { (action, index) -> Void in
+            let ud = UserDefaults.standard
+            self.contentsarray.remove(at: indexPath.row)
+            let newdata = NSKeyedArchiver.archivedData(withRootObject: self.contentsarray)
+            ud.set(newdata, forKey: "contentsarray")
+            ud.synchronize()
+            tableView.deleteRows(at: [indexPath], with: .fade)
+            self.loadcontents()
+        }
+        deleteButton.backgroundColor = UIColor.red
+        
+        return [deleteButton]
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "contentscell") as! contentsTableViewCell
-        cell.textLabel?.text = contentsarray[indexPath.row]
+        cell.label.text = contentsarray[indexPath.row].title
+        cell.thumbnail.image = UIImage(data: contentsarray[indexPath.row].image)
         return cell
     }
-
-
+    
+    
     func loadcontents(){
         
         let ud = UserDefaults.standard
-        if ud.array(forKey: "contentsarray") != nil{
+        if ud.data(forKey: "contentsarray") != nil{
             
-            contentsarray = ud.array(forKey: "contentsarray") as! [String]
+            let contentsdata = ud.data(forKey: "contentsarray")
+            if let data = contentsdata{
+            
+                contentsarray = NSKeyedUnarchiver.unarchiveObject(with: data) as! [webmetas]
+            }
             contentstableview.reloadData()
         }
     }
-
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.performSegue(withIdentifier: "toDetail", sender: nil)
         tableView.deselectRow(at: indexPath, animated: true)
     }
-
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toDetail" {
             
-//            let detailviewcontroller = segue.destination as! DetailViewController
-//            let selectedindexpath = memotableview.indexPathForSelectedRow!
-//            detailviewcontroller.selectedmemo = memoarray[selectedindexpath.row]
-//            detailviewcontroller.selectedrow = selectedindexpath.row
+            let detailViewController:DetailViewController = segue.destination as! DetailViewController
+            
+            let selectedindexpath = contentstableview.indexPathForSelectedRow!
+            
+            detailViewController.targetURL = contentsarray[selectedindexpath.row].metaurl
+            detailViewController.targettitle = contentsarray[selectedindexpath.row].title
+            //            detailviewcontroller.selectedrow = selectedindexpath.row
             
         }
         
     }
     
+    @IBAction func addpage(){
+        
+        let clip = UIPasteboard.general
+        
+        guard let pasteString = clip.string else {
+            let alertController = UIAlertController(title: "追加できません！",message: "クリップボードが空です。", preferredStyle:UIAlertControllerStyle.alert)
+            
+            let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default){ (action: UIAlertAction) in
+                alertController.dismiss(animated: true, completion: nil)
+            }
+            alertController.addAction(okAction)
+            self.present(alertController, animated: true, completion: nil)
+            
+            return
+        }
+        
+        print(pasteString)
+        
+        if pasteString == ""{
+            
+            let alertController = UIAlertController(title: "追加できません！",message: "クリップボードが空です。", preferredStyle:UIAlertControllerStyle.alert)
+            
+            let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default){ (action: UIAlertAction) in
+                alertController.dismiss(animated: true, completion: nil)
+            }
+            alertController.addAction(okAction)
+            self.present(alertController, animated: true, completion: nil)
+            
+        }else if !pasteString.hasPrefix("http"){
+            
+            let alertController = UIAlertController(title: "追加できません！",message: "URLがコピーされていません。", preferredStyle:UIAlertControllerStyle.alert)
+            
+            let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default){ (action: UIAlertAction) in
+                alertController.dismiss(animated: true, completion: nil)
+            }
+            alertController.addAction(okAction)
+            self.present(alertController, animated: true, completion: nil)
+            
+        }else {
+            //ページの追加
+            let ud = UserDefaults.standard
+            if ud.data(forKey: "contentsarray") != nil {
+                
+                let contentsdata = ud.data(forKey: "contentsarray")
+                if let data = contentsdata {
+                    contentsarray = NSKeyedUnarchiver.unarchiveObject(with: data) as! [webmetas]
+                }
+                var ogtitle: String = ""
+                
+                OGDataProvider.shared.fetchOGData(urlString: pasteString) { ogData, error in
+                    if ogtitle != ""{
+                    ogtitle = ogData.pageTitle
+                    }else{
+                        ogtitle = ogData.sourceUrl
+                    }
+                    _ = OGImageProvider.shared.loadImage(urlString: ogData.imageUrl, completion: { (image, error) in
+                        var newimage:UIImage!
+                        if image == nil{
+                            newimage = UIImage(named: "noimage.png")
+                            
+                        }else{
+                            newimage = image
+                        }
+
+                        let data = UIImagePNGRepresentation(newimage)
+                        let metas = webmetas(metaurl: pasteString, image: data!, title: ogtitle)
+                        
+                        self.contentsarray.append(metas)
+                        let newdata = NSKeyedArchiver.archivedData(withRootObject: self.contentsarray)
+                        ud.set(newdata, forKey: "contentsarray")
+                        ud.synchronize()
+                        self.loadcontents()
+                        
+                    })
+                    
+                    
+                }
+                
+            }else {
+                
+                var ogtitle: String = ""
+                OGDataProvider.shared.fetchOGData(urlString: pasteString) { ogData, error in
+                    if ogtitle != ""{
+                    ogtitle = ogData.pageTitle
+                    }else{
+                        ogtitle = ogData.sourceUrl
+                    }
+                    _ = OGImageProvider.shared.loadImage(urlString: ogData.imageUrl, completion: { (image, error) in
+                        var newimage:UIImage!
+                        if image == nil{
+                            newimage = UIImage(named: "noimage.png")
+                            
+                        }else{
+                            newimage = image
+                        }
+                        
+                        let data = UIImagePNGRepresentation(newimage)
+                        let metas = webmetas(metaurl: pasteString, image: data!, title: ogtitle)
+                        self.contentsarray.append(metas)
+                        let newdata = NSKeyedArchiver.archivedData(withRootObject: self.contentsarray)
+                        ud.set(newdata, forKey: "contentsarray")
+                        ud.synchronize()
+                        self.loadcontents()
+                    })
+                }
+                
+                
+            }
+        }
+    }
 }
 

@@ -11,7 +11,7 @@ import UIKit
 class contentsTableViewCell: UITableViewCell {
     
     @IBOutlet var thumbnail: UIImageView!
-    
+    @IBOutlet var label: UITextView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
